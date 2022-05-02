@@ -1,0 +1,183 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-28T13:26:23.900Z",
+    "end": "2021-04-28T13:26:31.665Z",
+    "duration": 7765,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "33b9128b-c7ea-4629-a9a2-10a1db26b216",
+      "title": "",
+      "fullFile": "cypress/integration/addToCart.spec.js",
+      "file": "cypress/integration/addToCart.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3bb0c6e0-a5f9-4e72-a682-59dd3ab64eab",
+          "title": "Add to Cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Check the title, url and links on the Landing Page",
+              "fullTitle": "Add to Cart Check the title, url and links on the Landing Page",
+              "timedOut": null,
+              "duration": 4106,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.verifyTitle();\ncy.verifyUrl();\ncy.verifyForPageToLoad();\ncy.contactLink();\ncy.loginLink();",
+              "err": {},
+              "uuid": "f6203b06-b208-4ab8-b5f3-164431b7b31d",
+              "parentUUID": "3bb0c6e0-a5f9-4e72-a682-59dd3ab64eab",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "click on 20% discount listed Item",
+              "fullTitle": "Add to Cart click on 20% discount listed Item",
+              "timedOut": null,
+              "duration": 2045,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.printedChiffonDress();\ncy.clickChiffonDress();",
+              "err": {},
+              "uuid": "a5923514-6443-4746-a95b-82b0d92d0e14",
+              "parentUUID": "3bb0c6e0-a5f9-4e72-a682-59dd3ab64eab",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check whether the Add to Cart Button is enabled and click product to add to Cart",
+              "fullTitle": "Add to Cart Check whether the Add to Cart Button is enabled and click product to add to Cart",
+              "timedOut": null,
+              "duration": 672,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.clickAddToCart();",
+              "err": {},
+              "uuid": "660b54ae-7188-465a-a2a2-0bf6e7c46d9e",
+              "parentUUID": "3bb0c6e0-a5f9-4e72-a682-59dd3ab64eab",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify whether the product added to Cart message is displayed",
+              "fullTitle": "Add to Cart Verify whether the product added to Cart message is displayed",
+              "timedOut": null,
+              "duration": 729,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.cartSuccessMessage();\ncy.cartAddedMessage();",
+              "err": {},
+              "uuid": "4421ba69-05a7-4088-9196-6833757059c4",
+              "parentUUID": "3bb0c6e0-a5f9-4e72-a682-59dd3ab64eab",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the product count from the Cart",
+              "fullTitle": "Add to Cart Verify the product count from the Cart",
+              "timedOut": null,
+              "duration": 144,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.cartCount();",
+              "err": {},
+              "uuid": "3fc3fa7c-c18f-4978-93f0-160529ebf934",
+              "parentUUID": "3bb0c6e0-a5f9-4e72-a682-59dd3ab64eab",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f6203b06-b208-4ab8-b5f3-164431b7b31d",
+            "a5923514-6443-4746-a95b-82b0d92d0e14",
+            "660b54ae-7188-465a-a2a2-0bf6e7c46d9e",
+            "4421ba69-05a7-4088-9196-6833757059c4",
+            "3fc3fa7c-c18f-4978-93f0-160529ebf934"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7696,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

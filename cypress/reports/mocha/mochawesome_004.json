@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-28T13:26:37.358Z",
+    "end": "2021-04-28T13:26:50.163Z",
+    "duration": 12805,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "381676c4-3fb6-4b8f-81a1-d010780bdcfe",
+      "title": "",
+      "fullFile": "cypress/integration/checkTotalPrice.spec.js",
+      "file": "cypress/integration/checkTotalPrice.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "00738a15-c70f-4a85-81cf-e0f71d2d385b",
+          "title": "Add the product quantity as five to the cart and check the total price",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Click on the 5th Product with 5% discount on the Landing Page",
+              "fullTitle": "Add the product quantity as five to the cart and check the total price Click on the 5th Product with 5% discount on the Landing Page",
+              "timedOut": null,
+              "duration": 6309,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_locators.anchor).contains(_locators.printedSummerDress).should('be.visible');\ncy.get(_locators.anchor).contains(_locators.printedSummerDress).click();\ncy.get(_locators.anchorH).contains(_locators.printedSummerDress).should('be.visible');",
+              "err": {},
+              "uuid": "60bd7ec9-60d0-4704-abfc-0f9516a2722d",
+              "parentUUID": "00738a15-c70f-4a85-81cf-e0f71d2d385b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add quantity as 5 for the product",
+              "fullTitle": "Add the product quantity as five to the cart and check the total price Add quantity as 5 for the product",
+              "timedOut": null,
+              "duration": 6398,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_locators.quantityWanted).clear();\ncy.get(_locators.quantityWanted).type(_locators.numberOfItems);\ncy.clickAddToCart();\ncy.cartSuccessMessage();\ncy.cartAddedMessage();\ncy.get(_locators.checkout).click();",
+              "err": {},
+              "uuid": "014375b3-dc00-4cd2-822e-ad14a18c021a",
+              "parentUUID": "00738a15-c70f-4a85-81cf-e0f71d2d385b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check whether the Total price is accurate from the Cart",
+              "fullTitle": "Add the product quantity as five to the cart and check the total price Check whether the Total price is accurate from the Cart",
+              "timedOut": null,
+              "duration": 77,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_locators.productPrice).invoke('text').should(textValue => {\n  expect(_locators.totalProductPrice).to.eq(textValue);\n});\ncy.get(_locators.priceTotal).invoke('text').should(textValue => {\n  expect(_locators.totalPriceWithTax).to.eq(textValue);\n});",
+              "err": {},
+              "uuid": "e557ff01-6131-49f8-be8f-b41bf88282d6",
+              "parentUUID": "00738a15-c70f-4a85-81cf-e0f71d2d385b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "60bd7ec9-60d0-4704-abfc-0f9516a2722d",
+            "014375b3-dc00-4cd2-822e-ad14a18c021a",
+            "e557ff01-6131-49f8-be8f-b41bf88282d6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12784,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

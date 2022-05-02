@@ -1,0 +1,40 @@
+{
+	"name": "cypress-app-action-project",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"clean:reports": "rm cypress/reports/mocha/* || true",
+		"pretest": "npm run clean:reports",
+		"scripts": "cypress run --record --key c78aaa25-fd70-4162-997c-57cbcab3fd4e",
+		"combine-reports": "npx mochawesome-merge \"cypress/reports/mocha/*.json\" > mochawesome.json",
+		"generate-report": "npx marge mochawesome.json -f report -o cypress/reports/mochareports",
+		"posttest": "npm run combine-reports && npm run generate-report",
+		"test": "npm run scripts || npm run posttest",
+		"cy:open": "cypress open",
+		"cy:run:smoke": "cypress run --headless --spec cypress/integration/productNames.spec.js --browser electron",
+		"cy:run:chrome": "cypress run --browser chrome",
+		"cy:run:firefox": "cypress run --browser firefox",
+		"cy:run:electron": "cypress run --browser electron",
+		"cy:run:chrome:headless": "cypress run --browser chrome --headless",
+		"cy:run:firefox:headless": "npx cypress run --spec 'cypress/integration/**.js'  --browser firefox --headless"
+	},
+	"keywords": [
+		"Cypress",
+		"App Action",
+		"Pattern"
+	],
+	"author": "Jay Kishore Duvvuri",
+	"license": "ISC",
+	"dependencies": {
+		"prettier": "^2.1.2"
+	},
+	"devDependencies": {
+		"cypress": "^7.1.0",
+		"cypress-multi-reporters": "^1.2.4", 
+		"mocha": "^7.1.1",
+		"mochawesome": "^6.1.1",
+		"mochawesome-merge": "^4.2.0",
+		"mochawesome-report-generator": "^5.1.0"
+	}
+}

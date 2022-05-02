@@ -1,0 +1,22 @@
+{
+	"baseUrl": "http://automationpractice.com/index.php",
+	"watchForFileChanges": false,
+	"reporter": "cypress-multi-reporters",
+	"reporterOptions": {
+		"reporterEnabled": "mochawesome",
+		"mochawesomeReporterOptions": {
+			"reportDir": "cypress/reports/mocha",
+			"quite": true,
+			"overwrite": false,
+			"html": false,
+			"json": true
+		}
+	},
+	"video": true,
+	"defaultCommandTimeout": 20000,
+	"pageLoadTimeout": 60000,
+	"retries": {
+		"runMode": 1,
+		"openMode": 1
+	}
+}

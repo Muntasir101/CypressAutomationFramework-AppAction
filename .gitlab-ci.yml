@@ -1,0 +1,10 @@
+image: cypress/base:10
+
+stages:
+  - test
+test:
+  stage: test
+  parallel: 3
+  script:
+    - npm install
+    - npm run cy:run:headless:parallel
